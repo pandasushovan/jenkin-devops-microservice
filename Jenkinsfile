@@ -23,7 +23,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-//                sh 'node --version'
+                sh 'maven --version'
+                sh 'docker version'
                 echo "build declarative"
 //                echo "BUILD ID - $env.BUILD_ID"
 //                echo "BUILD Name - $env.BUILD_NAME"
