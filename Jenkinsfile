@@ -12,14 +12,20 @@
 //}
 //DECLARATIVE SYNTAX
 pipeline {
-//    agent any
-//    agent { docker { image 'maven:3.6.3'} }
-    agent { docker { image 'node:15.3'} }
+    agent any
+    //agent { docker { image 'maven:3.6.3'} }
+    //agent { docker { image 'node:15.3'} }
     stages {
         stage("Build") {
             steps {
-                sh 'node --version'
+//                sh 'node --version'
                 echo "build declarative"
+                echo "BUILD ID - $env.BUILD_ID"
+                echo "BUILD Name - $env.BUILD_NAME"
+                echo "BUILD Tag - $env.BUILD_TAG"
+                echo "PATH - $PATH"
+                echo "Job Name - $env.JOB_NAME"
+
             }
         }
         stage("Test") {
