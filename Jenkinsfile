@@ -23,17 +23,16 @@ pipeline {
     stages {
         stage("Build") {
             steps {
+                echo "build declarative"
+                echo "BUILD ID - $env.BUILD_ID"
+                echo "BUILD Name - $env.BUILD_NAME"
+                echo "BUILD Tag - $env.BUILD_TAG"
+                echo "PATH - $PATH"
+                echo "Job Name - $env.JOB_NAME"
 //                sh 'docker version'
 //                sh 'mvn --version'
                 bat 'docker version'
                 bat 'mvn --version'
-//                echo "build declarative"
-//                echo "BUILD ID - $env.BUILD_ID"
-//                echo "BUILD Name - $env.BUILD_NAME"
-//                echo "BUILD Tag - $env.BUILD_TAG"
-//                echo "PATH - $PATH"
-//                echo "Job Name - $env.JOB_NAME"
-
             }
         }
         stage("Test") {
