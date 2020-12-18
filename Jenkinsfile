@@ -32,7 +32,7 @@ pipeline {
 //                sh 'docker version'
 //                sh 'mvn --version'
                 bat 'docker version'
-                bat 'mvn --version'
+//                bat 'mvn --version'
             }
         }
         stage("Test") {
