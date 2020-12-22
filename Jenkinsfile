@@ -18,7 +18,7 @@ pipeline {
     environment {
         mavenHome = tool 'myMaven'
         dockerHome = tool 'myDocker'
-        PATH = "$mavenHome/bin:$dockerHome/bin:$PATH"
+        PATH = "\Users\358556\OneDrive - Cognizant\Hist\Java\maven\apache-maven-3.6.3/bin:$dockerHome/bin:$PATH"
     }
     stages {
         stage("Build") {
