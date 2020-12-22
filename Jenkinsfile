@@ -16,9 +16,9 @@ pipeline {
     //agent { docker { image 'maven:3.6.3'} }
     //agent { docker { image 'node:15.3'} }
     environment {
-        mavenHome = tool 'MAVEN_HOME'
+        mavenHome = tool 'myMaven'
         dockerHome = tool 'myDocker'
-        PATH = "$mavenHome/bin:$dockerHome/bin:$PATH"
+        PATH = "C:\Users\358556\OneDrive - Cognizant\Hist\Java\maven\apache-maven-3.6.3/bin:$dockerHome/bin:$PATH"
     }
     stages {
         stage("Build") {
