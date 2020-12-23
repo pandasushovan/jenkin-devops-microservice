@@ -37,7 +37,7 @@ pipeline {
         }
         stage("Compile") {
             steps {
-                bat "mvn clean Compile"
+                bat "mvn clean compile"
             }
         }
         stage("Test") {
