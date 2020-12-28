@@ -42,7 +42,7 @@ pipeline {
         }
         stage("Test") {
             steps {
-                bat "mvn test"
+                bat "mvn -X test"
             }
         }
         stage("Integration Test") {
